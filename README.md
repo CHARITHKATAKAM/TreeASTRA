@@ -73,5 +73,5 @@ Fork the repository and submit a pull request!
 This project is licensed under the MIT License.
 
 ## Contact
-For any queries or contributions, reach out at: [your-email@example.com]
+For any queries or contributions, reach out at: [charithkatakam@example.com]
 
