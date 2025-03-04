@@ -1,3 +1,4 @@
+// File: static/js/canvas.js
 class TreeCanvas {
     constructor(canvasId) {
         this.canvas = document.getElementById(canvasId);

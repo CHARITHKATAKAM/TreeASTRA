@@ -1,3 +1,4 @@
+// File: static/js/tree.js
 document.addEventListener('DOMContentLoaded', function() {
     const canvas = new TreeCanvas('treeCanvas');
     let currentTree = null;
