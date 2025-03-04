@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Tree Visualizer</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container py-4">
+        <h1 class="text-center mb-4">Binary Tree Visualizer</h1>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Tree Controls</h5>
+
+                        <div class="mb-4">
+                            <label class="form-label">Tree Type</label>
+                            <select class="form-select form-select-lg" id="treeType">
+                                <option value="bst">Binary Search Tree</option>
+                                <option value="avl">AVL Tree</option>
+                                <option value="rb">Red-Black Tree</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="nodeValue" class="form-label">Add New Node</label>
+                            <div class="input-group input-group-lg">
+                                <input type="number" class="form-control" id="nodeValue" placeholder="Enter a number">
+                                <button class="btn btn-primary" id="addNode">Add Node</button>
+                            </div>
+                            <div class="form-text">Press Enter to add node</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">Tree Traversal</label>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-secondary btn-lg" data-traverse="inorder">Inorder</button>
+                                <button class="btn btn-secondary btn-lg" data-traverse="preorder">Preorder</button>
+                                <button class="btn btn-secondary btn-lg" data-traverse="postorder">Postorder</button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-danger btn-lg w-100" id="clearTree">Clear Tree</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="treeCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Traversal Result</h5>
+                    <p id="traversalResult" class="mb-0 lead"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tree.js') }}"></script>
+</body>
+</html>
